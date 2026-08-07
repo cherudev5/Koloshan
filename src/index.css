@@ -1,0 +1,120 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  margin:0;
+
+  font-family:'Inter',sans-serif;
+
+  background:#FFFFFF;
+
+  color:#1E293B;
+
+  overflow-x:hidden;
+
+}
+
+*{
+
+  box-sizing:border-box;
+
+}
+
+img{
+
+  max-width:100%;
+
+  display:block;
+
+}
+
+a{
+
+  text-decoration:none;
+
+}
+
+.container{
+
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+
+}
+
+.section{
+
+  @apply py-20;
+
+}
+
+.section-title{
+
+  @apply text-4xl font-bold text-secondary text-center;
+
+}
+
+.section-subtitle{
+
+  @apply text-lg text-gray-600 mt-4 text-center max-w-3xl mx-auto;
+
+}
+
+.btn{
+
+  @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-all duration-300;
+
+}
+
+.btn-primary{
+
+  @apply bg-primary text-white hover:bg-secondary;
+
+}
+
+.btn-outline{
+
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+
+}
+
+.card{
+
+  @apply bg-white rounded-xl shadow-card p-8 transition-all duration-300 hover:shadow-hover;
+
+}
+
+input,
+textarea{
+
+  @apply w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary;
+
+}
+
+::-webkit-scrollbar{
+
+  width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:#0B5ED7;
+
+  border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+  background:#EAF4FF;
+
+}
