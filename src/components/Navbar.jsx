@@ -49,7 +49,7 @@ function Navbar() {
 
           <div>
             <h2 className="font-bold text-2xl text-secondary">
-              Koloshan
+              Koloshan Enterprise
             </h2>
 
             <p className="text-sm text-primary">

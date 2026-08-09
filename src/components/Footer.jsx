@@ -78,7 +78,7 @@ function Footer() {
 
         <div className="container py-6 text-center text-gray-300">
 
-          © {new Date().getFullYear()} PrintPro.
+          © {new Date().getFullYear()} Koloshan Enterprise.
           All Rights Reserved.
 
         </div>
