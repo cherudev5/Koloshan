@@ -10,7 +10,7 @@ function Footer() {
 
             <h2 className="text-3xl font-bold">
 
-              Koloshan
+              Koloshan Enterprise
 
             </h2>
 
