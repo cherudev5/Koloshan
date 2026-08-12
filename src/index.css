@@ -1,120 +1,239 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* =========================================================
+   KOLOSHAN COLOR SYSTEM
+   ========================================================= */
 
+:root {
+  --navy-deep: #0d2136;
+  --navy: #064163;
+  --navy-surface: #1b3a55;
+  --navy-line: #2a4a68;
 
-html{
-  scroll-behavior:smooth;
+  --orange: #E69158;
+  --orange-dim: #c96a2e;
+
+  --cyan: #7de0db;
+
+  --off-white: #f4f1eb;
+  --off-white-dim: #c7d2db;
 }
 
-body{
 
-  margin:0;
+/* =========================================================
+   BASE
+   ========================================================= */
 
-  font-family:'Inter',sans-serif;
-
-  background:#FFFFFF;
-
-  color:#1E293B;
-
-  overflow-x:hidden;
-
+html {
+  scroll-behavior: smooth;
 }
 
-*{
-
-  box-sizing:border-box;
-
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--navy-deep);
+  color: var(--off-white);
+  line-height: 1.6;
 }
 
-img{
-
-  max-width:100%;
-
-  display:block;
-
+* {
+  box-sizing: border-box;
 }
 
-a{
 
-  text-decoration:none;
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
 
+::selection {
+  background-color: var(--orange);
+  color: var(--navy-deep);
 }
 
-.container{
 
-  @apply max-w-7xl mx-auto px-6 lg:px-8;
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
 
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.section{
-
-  @apply py-20;
-
+::-webkit-scrollbar-track {
+  background: var(--navy-deep);
 }
 
-.section-title{
-
-  @apply text-4xl font-bold text-secondary text-center;
-
+::-webkit-scrollbar-thumb {
+  background: var(--navy-line);
+  border-radius: 10px;
 }
 
-.section-subtitle{
-
-  @apply text-lg text-gray-600 mt-4 text-center max-w-3xl mx-auto;
-
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange);
 }
 
-.btn{
 
-  @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-semibold transition-all duration-300;
+/* =========================================================
+   REUSABLE SECTIONS
+   ========================================================= */
 
+@layer components {
+
+  .section {
+    @apply py-20 md:py-24;
+  }
+
+  .container {
+    @apply w-full max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center;
+    color: var(--off-white);
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    @apply max-w-2xl mx-auto mt-5 text-center;
+    color: var(--off-white-dim);
+    line-height: 1.8;
+  }
+
+
+  /* =======================================================
+     BUTTONS
+     ======================================================= */
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3
+           font-semibold rounded-lg
+           transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn;
+    background-color: var(--orange);
+    color: var(--navy-deep);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--orange-dim);
+    color: var(--off-white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 140, 66, 0.2);
+  }
+
+  .btn-secondary {
+    @apply btn border;
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--orange);
+    color: var(--navy-deep);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply btn border;
+    border-color: var(--off-white-dim);
+    color: var(--off-white);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+
+  /* =======================================================
+     CARDS
+     ======================================================= */
+
+  .card {
+    @apply rounded-xl p-6 transition-all duration-300;
+
+    background-color: var(--navy-surface);
+    border: 1px solid var(--navy-line);
+  }
+
+  .card:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  }
+
+
+  /* =======================================================
+     FORM INPUTS
+     ======================================================= */
+
+  .input {
+    @apply w-full px-4 py-3 rounded-lg outline-none transition-all duration-300;
+
+    background-color: var(--navy-surface);
+    border: 1px solid var(--navy-line);
+    color: var(--off-white);
+  }
+
+  .input::placeholder {
+    color: var(--off-white-dim);
+  }
+
+  .input:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 2px rgba(255, 140, 66, 0.12);
+  }
+
+
+  /* =======================================================
+     NAVIGATION
+     ======================================================= */
+
+  .nav-link {
+    @apply cursor-pointer font-medium transition-all duration-300;
+
+    color: var(--off-white-dim);
+  }
+
+  .nav-link:hover {
+    color: var(--orange);
+  }
+
+
+  /* =======================================================
+     ACCENT TEXT
+     ======================================================= */
+
+  .text-accent {
+    color: var(--orange);
+  }
+
+  .text-cyan {
+    color: var(--cyan);
+  }
+
+  .text-muted {
+    color: var(--off-white-dim);
+  }
+.text-dark-muted {
+  color: #40566b;
 }
 
-.btn-primary{
+  /* =======================================================
+     DIVIDERS
+     ======================================================= */
 
-  @apply bg-primary text-white hover:bg-secondary;
-
-}
-
-.btn-outline{
-
-  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
-
-}
-
-.card{
-
-  @apply bg-white rounded-xl shadow-card p-8 transition-all duration-300 hover:shadow-hover;
-
-}
-
-input,
-textarea{
-
-  @apply w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary;
-
-}
-
-::-webkit-scrollbar{
-
-  width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-  background:#0B5ED7;
-
-  border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-  background:#EAF4FF;
+  .divider {
+    width: 60px;
+    height: 4px;
+    border-radius: 999px;
+    background-color: var(--orange);
+  }
 
 }

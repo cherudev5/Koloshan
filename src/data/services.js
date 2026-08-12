@@ -7,6 +7,9 @@ import {
   FaBoxOpen,
   FaBookOpen,
   FaBullhorn,
+  FaGift,
+  FaCalendarAlt,
+  FaTags,
 } from "react-icons/fa";
 
 const services = [
@@ -23,7 +26,7 @@ const services = [
     icon: FaBullhorn,
     title: "Flyers & Posters",
     description:
-      "Eye-catching flyers and posters for marketing campaigns, events, and promotions.",
+      "Eye-catching flyers and posters for marketing campaigns, events, product launches, and promotions.",
   },
 
   {
@@ -31,7 +34,7 @@ const services = [
     icon: FaPrint,
     title: "Large Format Printing",
     description:
-      "Roll-up banners, pull-up stands, exhibition displays, signage, and outdoor advertising.",
+      "Roll-up banners, pull-up stands, exhibition displays, signage, wall graphics, and outdoor advertising.",
   },
 
   {
@@ -39,7 +42,7 @@ const services = [
     icon: FaPaintBrush,
     title: "Branding & Design",
     description:
-      "Creative logo design, company branding, marketing materials, and corporate identity packages.",
+      "Creative graphic design, logo development, marketing materials, and professional visual communication.",
   },
 
   {
@@ -47,7 +50,7 @@ const services = [
     icon: FaTshirt,
     title: "T-Shirt Printing",
     description:
-      "Custom branded apparel using screen printing, heat transfer, and DTF printing.",
+      "Custom T-shirt printing for businesses, teams, schools, organizations, events, and personal projects.",
   },
 
   {
@@ -55,7 +58,7 @@ const services = [
     icon: FaBoxOpen,
     title: "Packaging Printing",
     description:
-      "Custom packaging boxes, labels, stickers, tags, and branded product packaging.",
+      "Custom packaging boxes, product packaging, labels, stickers, tags, and other branded packaging materials.",
   },
 
   {
@@ -63,7 +66,7 @@ const services = [
     icon: FaBookOpen,
     title: "Brochures & Catalogues",
     description:
-      "Professional brochures, magazines, booklets, annual reports, and company profiles.",
+      "Professional brochures, magazines, booklets, annual reports, company profiles, and product catalogues.",
   },
 
   {
@@ -71,7 +74,31 @@ const services = [
     icon: FaImage,
     title: "Photo Printing",
     description:
-      "High-resolution photo printing on premium paper, canvas, acrylic, and photo boards.",
+      "High-resolution photo printing on premium paper, canvas, acrylic, photo boards, and other display materials.",
+  },
+
+  {
+    id: 9,
+    icon: FaGift,
+    title: "Apparel & Promo Gear",
+    description:
+      "Custom branded T-shirts, hoodies, caps, uniforms, bags, mugs, notebooks, and promotional merchandise.",
+  },
+
+  {
+    id: 10,
+    icon: FaCalendarAlt,
+    title: "Events & Packaging",
+    description:
+      "Complete print solutions for weddings, corporate events, launches, parties, exhibitions, and special occasions.",
+  },
+
+  {
+    id: 11,
+    icon: FaTags,
+    title: "Branding Solutions",
+    description:
+      "Complete business branding solutions including signage, stationery, vehicle branding, promotional materials, and corporate identity.",
   },
 ];
 

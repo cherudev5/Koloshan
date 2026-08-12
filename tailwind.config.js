@@ -1,48 +1,32 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
 
   theme: {
     extend: {
-
       colors: {
+        navyDeep: "#0d2136",
+        navy: "#064163",
+        navySurface: "#1b3a55",
+        navyLine: "#2a4a68",
 
-        primary: "#0B5ED7",
+        orange: "#E69158",
+        orangeDim: "#c96a2e",
 
-        secondary: "#003B73",
+        cyan: "#7de0db",
 
-        lightBlue: "#EAF4FF",
-
-        lightGray: "#F5F7FA",
-
-        text: "#1E293B",
-
-        white: "#FFFFFF",
-
+        offWhite: "#f4f1eb",
+        offWhiteDim: "#c7d2db",
       },
 
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
       },
-
-      boxShadow: {
-
-        card: "0 10px 30px rgba(0,0,0,.08)",
-
-        hover: "0 15px 40px rgba(11,94,215,.15)",
-
-      },
-
-      transitionDuration: {
-        400: "400ms",
-      }
-
     },
   },
 
   plugins: [],
-}
+};
