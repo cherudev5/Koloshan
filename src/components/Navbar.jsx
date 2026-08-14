@@ -46,7 +46,7 @@ function Navbar() {
           <img
             src="/images/KoloshanLogo.png"
             alt="Koloshan Enterprise Logo"
-            className="w-11 h-11 md:w-12 md:h-12 object-contain rounded-md"
+            className="w-20 h-11 md:w-12 md:h-12 object-contain rounded-md"
           />
 
           <div className="leading-tight">
