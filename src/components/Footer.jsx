@@ -11,6 +11,7 @@ function Footer() {
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Services", id: "services" },
+    {name: "Store", id: "store" },
     { name: "Portfolio", id: "portfolio" },
     { name: "Testimonials", id: "testimonials" },
     { name: "Contact", id: "contact" },
