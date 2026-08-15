@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollTop from "./components/ScrollTop";
+import Store from "./components/Store";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <WhyChooseUs />
 
         <Services />
+
+        <Store />
 
         <Portfolio />
 

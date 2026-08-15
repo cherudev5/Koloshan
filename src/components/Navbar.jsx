@@ -22,6 +22,7 @@ function Navbar() {
     "home",
     "about",
     "services",
+    "store",
     "portfolio",
     "testimonials",
     "contact",
