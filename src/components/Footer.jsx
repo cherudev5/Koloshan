@@ -153,7 +153,7 @@ function Footer() {
               <FaEnvelope className="text-[var(--orange)]" />
 
               <span className="text-[var(--off-white-dim)] group-hover:text-[var(--orange)] transition">
-                info@koloshan.co.ke
+                info@koloshanenterpriseslimited.com
               </span>
             </a>
 

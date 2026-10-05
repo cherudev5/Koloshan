@@ -113,7 +113,7 @@ Thank you.
                   </h4>
 
                   <p className="text-[var(--off-white-dim)] mt-1">
-                    info@koloshan.co.ke
+                    info@koloshanenterpriseslimited.com
                   </p>
                 </div>
               </a>
