@@ -50,7 +50,7 @@ function Navbar() {
             className="w-20 h-11 md:w-12 md:h-12 object-contain rounded-md"
           />
 
-          <div className="leading-tight">
+          <div className="leading-tight"                  >
             <h2 className="font-bold leading-none flex items-baseline gap-2">
   <span className="text-2xl md:text-3xl tracking-tight text-[var(--orange)]">
     Koloshan

@@ -162,7 +162,9 @@ function Footer() {
               <FaMapMarkerAlt className="text-[var(--orange)]" />
 
               <span className="text-[var(--off-white-dim)]">
-                Nairobi, Kenya
+                Nairobi,
+                Street:Tom Mboya Street,
+                Building:Dynamic Mall
               </span>
             </div>
 

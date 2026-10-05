@@ -40,15 +40,13 @@ const reasons = [
   {
     icon: FaShippingFast,
     title: "Nationwide Delivery",
-    description:
-      "Reliable delivery across Kenya for all print orders.",
+    description: "Reliable delivery across Kenya for all print orders.",
     accent: "orange",
   },
   {
     icon: FaHeadset,
     title: "Customer Support",
-    description:
-      "Friendly support before, during, and after every project.",
+    description: "Friendly support before, during, and after every project.",
     accent: "cyan",
   },
 ];
@@ -88,7 +86,6 @@ function WhyChooseUs() {
       />
 
       <div className="container mx-auto px-4 relative z-10">
-
         {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -129,9 +126,8 @@ function WhyChooseUs() {
               text-[#c7d2db]
             "
           >
-            We combine creativity, technology and experience
-            to produce print products that make a lasting
-            impression.
+            We combine creativity, technology and experience to produce print
+            products that make a lasting impression.
           </p>
         </motion.div>
 
@@ -176,7 +172,6 @@ function WhyChooseUs() {
                   duration: 0.5,
                 }}
               >
-
                 {/* Top accent */}
                 <div
                   className={`
@@ -187,11 +182,7 @@ function WhyChooseUs() {
                     w-16
                     h-1
                     rounded-b-full
-                    ${
-                      isOrange
-                        ? "bg-[#ff8c42]"
-                        : "bg-[#7de0db]"
-                    }
+                    ${isOrange ? "bg-[#ff8c42]" : "bg-[#7de0db]"}
                   `}
                 />
 
@@ -250,12 +241,10 @@ function WhyChooseUs() {
                 >
                   {item.description}
                 </p>
-
               </motion.div>
             );
           })}
         </div>
-
       </div>
 
       {/* Bottom divider */}
@@ -269,7 +258,6 @@ function WhyChooseUs() {
           bg-[#2a4a68]
         "
       />
-
     </section>
   );
 }

@@ -130,7 +130,9 @@ Thank you.
                   </h4>
 
                   <p className="text-[var(--off-white-dim)] mt-1">
-                    Nairobi, Kenya
+                    Nairobi,
+                    Street:Tom Mboya Street,
+                    Building:Dynamic Mall
                   </p>
                 </div>
               </div>
