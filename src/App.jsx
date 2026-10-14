@@ -10,14 +10,14 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollTop from "./components/ScrollTop";
 import Store from "./components/Store";
-import Terms from "./pages/Terms";
-import Privacy from "./pages/Privacy";
+import Terms from "./Pages/Terms";
+import Privacy from "./Pages/Privacy";
 import VisitorPrefs from "./components/VisitorPrefs";
 
 function App() {
   const path = window.location.pathname.replace(/\/+$/, "");
 
-  if (path === "/terms") {
+  if (path === "/Terms") {
     return (
       <>
         <Terms />
@@ -26,7 +26,7 @@ function App() {
     );
   }
 
-  if (path === "/privacy") {
+  if (path === "/Privacy") {
     return (
       <>
         <Privacy />

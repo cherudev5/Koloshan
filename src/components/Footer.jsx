@@ -214,14 +214,14 @@ function Footer() {
 
             <div className="flex items-center gap-5 text-sm">
               <a
-                href="/terms"
+                href="/Terms"
                 className="text-[var(--off-white-dim)] hover:text-[var(--orange)] transition-colors"
               >
                 Terms of Service
               </a>
 
               <a
-                href="/privacy"
+                href="/Privacy"
                 className="text-[var(--off-white-dim)] hover:text-[var(--orange)] transition-colors"
               >
                 Privacy Policy
