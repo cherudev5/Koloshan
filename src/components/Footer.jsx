@@ -212,6 +212,32 @@ function Footer() {
               All Rights Reserved.
             </p>
 
+            <div className="flex items-center gap-5 text-sm">
+              <a
+                href="/terms"
+                className="text-[var(--off-white-dim)] hover:text-[var(--orange)] transition-colors"
+              >
+                Terms of Service
+              </a>
+
+              <a
+                href="/privacy"
+                className="text-[var(--off-white-dim)] hover:text-[var(--orange)] transition-colors"
+              >
+                Privacy Policy
+              </a>
+
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(new Event("koloshan:open-cookie-settings"))
+                }
+                className="text-[var(--off-white-dim)] hover:text-[var(--orange)] transition-colors"
+              >
+                Cookie Settings
+              </button>
+            </div>
+
             <p className="text-sm text-[var(--off-white-dim)]">
               Print Bold.{" "}
               <span className="text-[var(--orange)]">

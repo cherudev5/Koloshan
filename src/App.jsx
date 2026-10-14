@@ -10,8 +10,31 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollTop from "./components/ScrollTop";
 import Store from "./components/Store";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import VisitorPrefs from "./components/VisitorPrefs";
 
 function App() {
+  const path = window.location.pathname.replace(/\/+$/, "");
+
+  if (path === "/terms") {
+    return (
+      <>
+        <Terms />
+        <VisitorPrefs />
+      </>
+    );
+  }
+
+  if (path === "/privacy") {
+    return (
+      <>
+        <Privacy />
+        <VisitorPrefs />
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />
@@ -41,6 +64,8 @@ function App() {
       <WhatsAppButton />
 
       <ScrollTop />
+
+      <VisitorPrefs />
 
     </>
   );

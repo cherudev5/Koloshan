@@ -4,6 +4,7 @@ import {
   FaMapMarkerAlt,
   FaWhatsapp,
 } from "react-icons/fa";
+import MapEmbed from "./MapEmbed";
 
 function Contact() {
   const handleSubmit = (e) => {
@@ -100,7 +101,7 @@ Thank you.
 
               {/* Email */}
               <a
-                href="mailto:info@koloshan.co.ke"
+                href="mailto:info@koloshanenterpriseslimited.com"
                 className="flex items-center gap-5 group"
               >
                 <div className="w-14 h-14 rounded-xl bg-[var(--navy-surface)] border border-[var(--navy-line)] flex items-center justify-center group-hover:bg-[var(--orange)] transition">
@@ -151,13 +152,11 @@ Thank you.
             </a>
 
             {/* Map */}
-            <iframe
+            <MapEmbed
               title="Koloshan location"
-              className="w-full h-80 rounded-2xl mt-10 border border-[var(--navy-line)]"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d311.3373372117215!2d36.82651567663625!3d-1.2854714345917946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11cce26e7913%3A0x966945e229804083!2sDynamic%20Mall!5e1!3m2!1sen!2ske!4v1786124189245!5m2!1sen!2ske"
-              loading="lazy"
-              allowFullScreen
-            ></iframe>
+              fallbackHref="https://www.google.com/maps/search/?api=1&query=Dynamic+Mall+Tom+Mboya+Street+Nairobi"
+            />
 
           </div>
 

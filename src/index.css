@@ -235,5 +235,182 @@ body {
     border-radius: 999px;
     background-color: var(--orange);
   }
+/* Cookie consent — themed to the Koloshan palette (see src/index.css) */
 
+#ko-vp-root {
+  --ko-ink: var(--off-white);
+  --ko-muted: var(--off-white-dim);
+  --ko-line: var(--navy-line);
+  --ko-paper: var(--navy-surface);
+  --ko-tint: var(--navy);
+  --ko-accent: var(--orange);
+  --ko-accent-hover: var(--orange-dim);
+  --ko-on-accent: var(--navy-deep);
+  --ko-focus: var(--cyan);
+  color: var(--ko-ink);
+  font: 15px/1.5 "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+#ko-vp-root *,
+#ko-vp-root *::before,
+#ko-vp-root *::after { box-sizing: border-box; }
+
+#ko-vp-banner {
+  position: fixed;
+  z-index: 2147483000;
+  inset: auto 20px 20px 20px;
+  max-width: 1040px;
+  margin-inline: auto;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  background: var(--ko-paper);
+  border: 1px solid var(--ko-line);
+  border-radius: 14px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, .45);
+}
+
+#ko-vp-banner[hidden],
+#ko-vp-backdrop[hidden] { display: none !important; }
+
+#ko-vp-banner h2,
+#ko-vp-preferences h2 {
+  margin: 0 0 6px;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+#ko-vp-banner p,
+#ko-vp-preferences p { margin: 0; color: var(--ko-muted); }
+
+#ko-vp-root a {
+  color: var(--ko-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#ko-vp-root a:focus-visible,
+#ko-vp-root button:focus-visible,
+#ko-vp-root input:focus-visible,
+#ko-vp-preferences:focus-visible {
+  outline: 3px solid var(--ko-focus);
+  outline-offset: 3px;
+}
+
+.ko-vp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+#ko-vp-root button {
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid var(--ko-muted);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ko-ink);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+#ko-vp-root button:hover { background: var(--ko-tint); }
+
+#ko-vp-root button.ko-primary {
+  border-color: var(--ko-accent);
+  background: var(--ko-accent);
+  color: var(--ko-on-accent);
+}
+
+#ko-vp-root button.ko-primary:hover {
+  border-color: var(--ko-accent-hover);
+  background: var(--ko-accent-hover);
+  color: var(--off-white);
+}
+
+/* Bottom-left so it never collides with the WhatsApp / scroll-top buttons */
+#ko-vp-settings-trigger {
+  position: fixed;
+  z-index: 2147482999;
+  left: 16px;
+  bottom: 16px;
+  padding: 9px 13px !important;
+  border-radius: 999px !important;
+  background: var(--ko-paper) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .35);
+}
+
+#ko-vp-backdrop {
+  position: fixed;
+  z-index: 2147483001;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(5, 12, 20, .7);
+}
+
+#ko-vp-preferences {
+  width: min(100%, 560px);
+  max-height: min(88vh, 720px);
+  overflow: auto;
+  padding: 24px;
+  background: var(--ko-paper);
+  border: 1px solid var(--ko-line);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
+}
+
+.ko-vp-pref-intro { margin-bottom: 16px !important; }
+
+.ko-vp-category {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 0;
+  border-top: 1px solid var(--ko-line);
+}
+
+.ko-vp-category strong { display: block; margin-bottom: 2px; }
+.ko-vp-category small { display: block; color: var(--ko-muted); font-size: .92rem; }
+.ko-vp-category input { width: 20px; height: 20px; accent-color: var(--ko-accent); flex: 0 0 auto; }
+.ko-vp-category input:disabled { opacity: .7; }
+
+.ko-vp-pref-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 14px;
+  border-top: 1px solid var(--ko-line);
+}
+
+@media (max-width: 720px) {
+  #ko-vp-banner {
+    inset: auto 10px 10px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 18px;
+    max-height: 85vh;
+    overflow: auto;
+  }
+  .ko-vp-actions { justify-content: stretch; }
+  .ko-vp-actions button { flex: 1 1 145px; }
+  #ko-vp-preferences { padding: 20px; }
+  .ko-vp-pref-actions button { flex: 1 1 140px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #ko-vp-banner,
+  #ko-vp-preferences { animation: ko-vp-in .18s ease-out both; }
+  @keyframes ko-vp-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
 }

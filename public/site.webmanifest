@@ -1,0 +1,17 @@
+{
+  "name": "Koloshan Enterprises Limited",
+  "short_name": "Koloshan",
+  "description": "Professional printing, branding, packaging and promotional products in Nairobi, Kenya.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#0d2136",
+  "theme_color": "#0d2136",
+  "icons": [
+    {
+      "src": "/images/KoloshanLogo.png",
+      "sizes": "628x616",
+      "type": "image/png"
+    }
+  ]
+}
