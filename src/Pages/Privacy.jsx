@@ -181,7 +181,7 @@ function Privacy() {
       }
       contactCard={<LegalContact />}
       sections={sections}
-      footerLinks={[{ href: "/terms", label: "Terms of Service" }]}
+      footerLinks={[{ href: "/Terms", label: "Terms of Service" }]}
     />
   );
 }
